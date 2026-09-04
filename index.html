@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- =========================================================
+       SEO & RESPONSIVE
+       ========================================================= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Portfolio ของเด็กหญิงพิริยากร พรมดี นักเรียนชั้นมัธยมศึกษาปีที่ 3 ผู้สนใจศึกษาต่อด้านวิศวกรรมโยธา">
+
+  <meta name="theme-color" content="#ec4899">
+
+  <title>Portfolio | เด็กหญิงพิริยากร พรมดี</title>
+
+
+  <!-- =========================================================
+       GOOGLE FONT
+       ========================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =========================================================
+       TAILWIND CSS
+       ========================================================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            pinkmain: "#ec4899",
+
+            pinkdark: "#be185d",
+
+            pinklight: "#fce7f3",
+
+            pinksoft: "#fdf2f8",
+
+            rose: "#fb7185"
+
+          },
+
+          fontFamily: {
+
+            thai: [
+              "Noto Sans Thai",
+              "sans-serif"
+            ]
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+
+  <!-- =========================================================
+       CUSTOM CSS
+       ========================================================= -->
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family:
+        "Noto Sans Thai",
+        sans-serif;
+
+      background: #fff7fb;
+
+      color: #374151;
+
+    }
+
+
+    /* Pink Blueprint Grid */
+
+    .pink-grid {
+
+      background-color: #be185d;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,.08) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.08) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          rgba(255,255,255,.03) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.03) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        50px 50px,
+        50px 50px,
+        10px 10px,
+        10px 10px;
+
+    }
+
+
+    /* Section Title */
+
+    .section-title {
+
+      position: relative;
+
+      display: inline-block;
+
+    }
+
+
+    .section-title::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -10px;
+
+      width: 55px;
+
+      height: 4px;
+
+      background: #ec4899;
+
+      border-radius: 99px;
+
+    }
+
+
+    /* Project Card */
+
+    .project-card {
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    }
+
+
+    .project-card:hover {
+
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 20px 40px
+        rgba(190,24,93,.15);
+
+    }
+
+
+    .project-card img {
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .project-card:hover img {
+
+      transform: scale(1.06);
+
+    }
+
+
+    /* Progress Bar */
+
+    .progress-bar {
+
+      width: 0;
+
+      transition:
+        width 1.2s ease;
+
+    }
+
+
+    /* Reveal Animation */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform: translateY(30px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    }
+
+
+    .reveal.active {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+
+    /* Hero Pattern */
+
+    .hero-pattern {
+
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: .15;
+
+      background-image:
+
+        linear-gradient(
+          45deg,
+          transparent 49%,
+          #fff 50%,
+          transparent 51%
+        ),
+
+        linear-gradient(
+          -45deg,
+          transparent 49%,
+          #fff 50%,
+          transparent 51%
+        );
+
+      background-size: 80px 80px;
+
+    }
+
+
+    /* Mobile Menu */
+
+    #mobileMenu {
+
+      transition:
+        max-height .3s ease,
+        opacity .3s ease;
+
+      max-height: 0;
+
+      opacity: 0;
+
+      overflow: hidden;
+
+    }
+
+
+    #mobileMenu.open {
+
+      max-height: 500px;
+
+      opacity: 1;
+
+    }
+
+
+    /* Scrollbar */
+
+    ::-webkit-scrollbar {
+
+      width: 9px;
+
+    }
+
+
+    ::-webkit-scrollbar-track {
+
+      background: #fce7f3;
+
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+
+      background: #ec4899;
+
+      border-radius: 10px;
+
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+
+      background: #be185d;
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50
+           bg-white/95 backdrop-blur-md
+           shadow-sm">
+
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8">
+
+      <div
+        class="h-20 flex items-center justify-between">
+
+
+        <!-- Logo -->
+
+        <a
+          href="#home"
+          class="flex items-center gap-3">
+
+          <div
+            class="w-11 h-11
+                   rounded-xl
+                   bg-pinkmain
+                   text-white
+                   flex items-center justify-center
+                   font-bold text-lg
+                   shadow-lg">
+
+            PP
+
+          </div>
+
+
+          <div class="hidden sm:block">
+
+            <div
+              class="font-bold text-pinkdark">
+
+              PIRIYAKORN
+
+            </div>
+
+            <div
+              class="text-xs text-slate-500">
+
+              Civil Engineering Portfolio
+
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <!-- Desktop Menu -->
+
+        <div
+          class="hidden md:flex
+                 items-center gap-7">
+
+
+          <a
+            href="#home"
+            class="text-sm font-medium
+                   hover:text-pinkmain
+                   transition">
+
+            หน้าหลัก
+
+          </a>
+
+
+          <a
+            href="#about"
+            class="text-sm font-medium
+                   hover:text-pinkmain
+                   transition">
+
+            เกี่ยวกับฉัน
+
+          </a>
+
+
+          <a
+            href="#skills"
+            class="text-sm font-medium
+                   hover:text-pinkmain
+                   transition">
+
+            ทักษะ
+
+          </a>
+
+
+          <a
+            href="#projects"
+            class="text-sm font-medium
+                   hover:text-pinkmain
+                   transition">
+
+            ผลงาน
+
+          </a>
+
+
+          <a
+            href="#contact"
+            class="px-5 py-2.5
+                   bg-pinkmain
+                   text-white
+                   rounded-lg
+                   text-sm font-semibold
+                   hover:bg-pinkdark
+                   transition">
+
+            ติดต่อ
+
+          </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+
+        <button
+          id="menuButton"
+          class="md:hidden
+                 w-11 h-11
+                 rounded-lg
+                 bg-pinksoft
+                 flex items-center justify-center
+                 text-pinkdark"
+          aria-label="เปิดเมนู">
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+
+          </svg>
+
+        </button>
+
+      </div>
+
+
+      <!-- Mobile Menu -->
+
+      <div
+        id="mobileMenu"
+        class="md:hidden">
+
+        <div
+          class="py-4 border-t
+                 border-pink-100
+                 space-y-1">
+
+
+          <a
+            href="#home"
+            class="mobile-link
+                   block px-4 py-3
+                   rounded-lg
+                   hover:bg-pinksoft">
+
+            หน้าหลัก
+
+          </a>
+
+
+          <a
+            href="#about"
+            class="mobile-link
+                   block px-4 py-3
+                   rounded-lg
+                   hover:bg-pinksoft">
+
+            เกี่ยวกับฉัน
+
+          </a>
+
+
+          <a
+            href="#skills"
+            class="mobile-link
+                   block px-4 py-3
+                   rounded-lg
+                   hover:bg-pinksoft">
+
+            ทักษะ
+
+          </a>
+
+
+          <a
+            href="#projects"
+            class="mobile-link
+                   block px-4 py-3
+                   rounded-lg
+                   hover:bg-pinksoft">
+
+            ผลงาน
+
+          </a>
+
+
+          <a
+            href="#contact"
+            class="mobile-link
+                   block px-4 py-3
+                   rounded-lg
+                   hover:bg-pinksoft">
+
+            ติดต่อ
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+
+  <section
+    id="home"
+    class="relative min-h-screen
+           flex items-center
+           overflow-hidden
+           pink-grid">
+
+
+    <div class="hero-pattern"></div>
+
+
+    <!-- Decorative Circles -->
+
+    <div
+      class="absolute top-32 right-10
+             w-48 h-48
+             border border-white/20
+             rounded-full">
+    </div>
+
+
+    <div
+      class="absolute top-44 right-22
+             w-32 h-32
+             border border-white/20
+             rounded-full">
+    </div>
+
+
+    <div
+      class="max-w-7xl mx-auto
+             px-5 lg:px-8
+             py-32 w-full
+             relative z-10">
+
+
+      <div
+        class="grid lg:grid-cols-2
+               gap-14
+               items-center">
+
+
+        <!-- Hero Text -->
+
+        <div
+          class="text-white reveal">
+
+
+          <div
+            class="inline-flex
+                   items-center gap-2
+                   px-4 py-2
+                   rounded-full
+                   bg-white/10
+                   border border-white/20
+                   text-sm mb-7">
+
+            <span
+              class="w-2.5 h-2.5
+                     bg-pink-200
+                     rounded-full
+                     animate-pulse">
+            </span>
+
+            M.3 Student • Future Engineer
+
+          </div>
+
+
+          <!-- NAME -->
+
+          <h1
+            class="text-4xl
+                   sm:text-5xl
+                   lg:text-6xl
+                   font-extrabold
+                   leading-tight
+                   mb-6">
+
+            เด็กหญิง
+            <span class="text-pink-200">
+              พิริยากร
+            </span>
+
+            <br>
+
+            พรมดี
+
+          </h1>
+
+
+          <h2
+            class="text-xl
+                   sm:text-2xl
+                   lg:text-3xl
+                   font-semibold
+                   text-pink-100
+                   mb-5">
+
+            Building the Future
+
+          </h2>
+
+
+          <p
+            class="text-lg
+                   text-pink-100/90
+                   leading-relaxed
+                   max-w-xl
+                   mb-9">
+
+            ว่าที่นักเรียนเตรียมวิศวกรรมโยธา
+            ผู้มีความสนใจด้านการออกแบบโครงสร้าง
+            วิทยาศาสตร์ คณิตศาสตร์
+            และการสร้างสรรค์สิ่งใหม่ ๆ
+
+          </p>
+
+
+          <!-- Buttons -->
+
+          <div
+            class="flex flex-wrap gap-4">
+
+
+            <a
+              href="#projects"
+              class="inline-flex
+                     items-center gap-2
+                     px-6 py-3.5
+                     bg-white
+                     text-pinkdark
+                     font-bold
+                     rounded-xl
+                     hover:bg-pink-50
+                     transition
+                     shadow-lg">
+
+              ดูผลงานของฉัน
+
+              <span>↓</span>
+
+            </a>
+
+
+            <a
+              href="#contact"
+              class="inline-flex
+                     items-center gap-2
+                     px-6 py-3.5
+                     border border-white/30
+                     text-white
+                     font-semibold
+                     rounded-xl
+                     hover:bg-white/10
+                     transition">
+
+              ติดต่อฉัน
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Profile -->
+
+        <div
+          class="flex justify-center
+                 lg:justify-end
+                 reveal">
+
+          <div class="relative">
+
+
+            <!-- Profile Image -->
+
+            <div
+              class="w-64 h-64
+                     sm:w-80 sm:h-80
+                     lg:w-[420px]
+                     lg:h-[420px]
+                     rounded-3xl
+                     overflow-hidden
+                     border-8
+                     border-white/20
+                     shadow-2xl">
+
+              <!-- เปลี่ยน URL รูปตรงนี้ -->
+
+              <img
+                src="https://whoopea.com/cdn/shop/files/1_4b6450cf8d61635ed1b13109db93e37c.jpg?v=1762153037"
+                alt="รูปโปรไฟล์ เด็กหญิงพิริยากร พรมดี"
+                class="w-full h-full object-cover">
+
+            </div>
+
+
+            <!-- Career Badge -->
+
+            <div
+              class="absolute
+                     -bottom-6
+                     -left-6
+                     bg-white
+                     text-pinkdark
+                     rounded-2xl
+                     p-5
+                     shadow-xl">
+
+              <div
+                class="text-xs
+                       text-slate-500
+                       mb-1">
+
+                DREAM CAREER
+
+              </div>
+
+              <div
+                class="font-bold
+                       text-lg">
+
+                Civil Engineer
+
+              </div>
+
+            </div>
+
+
+            <!-- M4 Badge -->
+
+            <div
+              class="absolute
+                     -top-5
+                     -right-5
+                     bg-pink-200
+                     text-pinkdark
+                     rounded-2xl
+                     px-5 py-4
+                     shadow-xl
+                     font-bold">
+
+              M.4
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       ABOUT ME
+       ========================================================= -->
+
+  <section
+    id="about"
+    class="py-24 lg:py-32
+           bg-white">
+
+    <div
+      class="max-w-7xl
+             mx-auto
+             px-5 lg:px-8">
+
+
+      <div
+        class="grid lg:grid-cols-2
+               gap-16
+               items-center">
+
+
+        <!-- Image -->
+
+        <div class="reveal">
+
+          <div class="relative">
+
+            <img
+              src="https://placehold.co/800x900/fce7f3/be185d?text=ACTIVITY+PHOTO"
+              alt="ภาพกิจกรรมของพิริยากร"
+              class="w-full
+                     max-w-lg
+                     mx-auto
+                     rounded-3xl
+                     shadow-xl">
+
+
+            <div
+              class="absolute
+                     -bottom-6
+                     -right-4
+                     lg:right-0
+                     bg-pinkmain
+                     text-white
+                     p-6
+                     rounded-2xl
+                     shadow-xl">
+
+              <div
+                class="text-3xl
+                       font-bold">
+
+                M.3
+
+              </div>
+
+              <div
+                class="text-sm
+                       text-pink-100">
+
+                Student
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- About Content -->
+
+        <div class="reveal">
+
+          <span
+            class="text-pinkmain
+                   font-bold
+                   text-sm
+                   tracking-widest
+                   uppercase">
+
+            About Me
+
+          </span>
+
+
+          <h2
+            class="section-title
+                   text-3xl
+                   sm:text-4xl
+                   font-extrabold
+                   text-pinkdark
+                   mt-3
+                   mb-10">
+
+            เกี่ยวกับฉัน
+
+          </h2>
+
+
+          <p
+            class="text-slate-600
+                   leading-8
+                   mb-5">
+
+            สวัสดีค่ะ หนูชื่อ
+            <strong class="text-pinkdark">
+              เด็กหญิงพิริยากร พรมดี
+            </strong>
+            เป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
+            ที่มีความสนใจด้านวิทยาศาสตร์
+            คณิตศาสตร์ และการออกแบบ
+
+          </p>
+
+
+          <p
+            class="text-slate-600
+                   leading-8
+                   mb-5">
+
+            หนูสนใจวิศวกรรมโยธา
+            เพราะอยากเข้าใจว่าอาคาร
+            สะพาน ถนน และสิ่งก่อสร้างต่าง ๆ
+            ถูกออกแบบให้มีความแข็งแรง
+            และปลอดภัยได้อย่างไร
+
+          </p>
+
+
+          <p
+            class="text-slate-600
+                   leading-8
+                   mb-8">
+
+            เป้าหมายของหนูคือการศึกษาต่อ
+            ในสายเตรียมวิศวกรรมศาสตร์
+            เพื่อพัฒนาความรู้และทักษะ
+            และเติบโตเป็นวิศวกรโยธา
+            ที่สามารถสร้างประโยชน์ให้กับสังคม
+
+          </p>
+
+
+          <!-- Info Cards -->
+
+          <div
+            class="grid sm:grid-cols-2
+                   gap-4">
+
+
+            <div
+              class="p-4
+                     bg-pinksoft
+                     rounded-xl">
+
+              <div
+                class="text-xs
+                       text-slate-400
+                       mb-1">
+
+                NAME
+
+              </div>
+
+              <div
+                class="font-semibold
+                       text-pinkdark">
+
+                พิริยากร พรมดี
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="p-4
+                     bg-pinksoft
+                     rounded-xl">
+
+              <div
+                class="text-xs
+                       text-slate-400
+                       mb-1">
+
+                EDUCATION
+
+              </div>
+
+              <div
+                class="font-semibold
+                       text-pinkdark">
+
+                Grade 9 / M.3
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       SKILLS
+       ========================================================= -->
+
+  <section
+    id="skills"
+    class="py-24 lg:py-32
+           bg-pinksoft">
+
+    <div
+      class="max-w-7xl
+             mx-auto
+             px-5 lg:px-8">
+
+
+      <div
+        class="text-center
+               mb-16
+               reveal">
+
+        <span
+          class="text-pinkmain
+                 font-bold
+                 text-sm
+                 tracking-widest
+                 uppercase">
+
+          My Skills
+
+        </span>
+
+
+        <h2
+          class="section-title
+                 text-3xl
+                 sm:text-4xl
+                 font-extrabold
+                 text-pinkdark
+                 mt-3">
+
+          ทักษะและความสามารถ
+
+        </h2>
+
+
+        <p
+          class="max-w-2xl
+                 mx-auto
+                 text-slate-500
+                 mt-8
+                 leading-7">
+
+          ทักษะที่กำลังพัฒนาเพื่อเตรียมความพร้อม
+          สำหรับการเรียนด้านวิศวกรรมศาสตร์
+
+        </p>
+
+      </div>
+
+
+
+      <div
+        class="grid lg:grid-cols-2
+               gap-10">
+
+
+        <!-- Academic Skills -->
+
+        <div
+          class="bg-white
+                 p-7 sm:p-9
+                 rounded-3xl
+                 shadow-sm
+                 reveal">
+
+
+          <div
+            class="flex
+                   items-center
+                   gap-4
+                   mb-8">
+
+            <div
+              class="w-12 h-12
+                     rounded-xl
+                     bg-pinkmain
+                     text-white
+                     flex items-center
+                     justify-center
+                     text-xl">
+
+              📐
+
+            </div>
+
+
+            <div>
+
+              <h3
+                class="font-bold
+                       text-xl
+                       text-pinkdark">
+
+                Academic Skills
+
+              </h3>
+
+              <p
+                class="text-sm
+                       text-slate-500">
+
+                ทักษะด้านวิชาการ
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Mathematics -->
+
+          <div class="mb-7">
+
+            <div
+              class="flex
+                     justify-between
+                     mb-2">
+
+              <span
+                class="font-medium">
+
+                Mathematics
+
+              </span>
+
+              <span
+                class="text-sm
+                       text-slate-500">
+
+                90%
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="h-3
+                     bg-pink-100
+                     rounded-full
+                     overflow-hidden">
+
+              <div
+                class="progress-bar
+                       h-full
+                       bg-pinkmain
+                       rounded-full"
+                data-width="90%">
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Physics -->
+
+          <div class="mb-7">
+
+            <div
+              class="flex
+                     justify-between
+                     mb-2">
+
+              <span
+                class="font-medium">
+
+                Physics
+
+              </span>
+
+              <span
+                class="text-sm
+                       text-slate-500">
+
+                80%
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="h-3
+                     bg-pink-100
+                     rounded-full
+                     overflow-hidden">
+
+              <div
+                class="progress-bar
+                       h-full
+                       bg-pinkmain
+                       rounded-full"
+                data-width="80%">
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Science -->
+
+          <div>
+
+            <div
+              class="flex
+                     justify-between
+                     mb-2">
+
+              <span
+                class="font-medium">
+
+                Science
+
+              </span>
+
+              <span
+                class="text-sm
+                       text-slate-500">
+
+                85%
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="h-3
+                     bg-pink-100
+                     rounded-full
+                     overflow-hidden">
+
+              <div
+                class="progress-bar
+                       h-full
+                       bg-pinkmain
+                       rounded-full"
+                data-width="85%">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Technical Skills -->
+
+        <div
+          class="bg-white
+                 p-7 sm:p-9
+                 rounded-3xl
+                 shadow-sm
+                 reveal">
+
+
+          <div
+            class="flex
+                   items-center
+                   gap-4
+                   mb-8">
+
+            <div
+              class="w-12 h-12
+                     rounded-xl
+                     bg-pink-200
+                     text-pinkdark
+                     flex items-center
+                     justify-center
+                     text-xl">
+
+              🛠️
+
+            </div>
+
+
+            <div>
+
+              <h3
+                class="font-bold
+                       text-xl
+                       text-pinkdark">
+
+                Technical & Soft Skills
+
+              </h3>
+
+              <p
+                class="text-sm
+                       text-slate-500">
+
+                ทักษะด้านเทคนิคและการทำงาน
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="flex
+                   flex-wrap
+                   gap-3">
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              AutoCAD
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              SketchUp
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              Problem Solving
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              Teamwork
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              Communication
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              Creativity
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              STEM
+
+            </span>
+
+
+            <span
+              class="px-4 py-2
+                     bg-pink-100
+                     text-pinkdark
+                     rounded-full
+                     font-medium">
+
+              Basic Coding
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       PROJECTS
+       ========================================================= -->
+
+  <section
+    id="projects"
+    class="py-24 lg:py-32
+           bg-white">
+
+    <div
+      class="max-w-7xl
+             mx-auto
+             px-5 lg:px-8">
+
+
+      <div
+        class="mb-16
+               reveal">
+
+
+        <span
+          class="text-pinkmain
+                 font-bold
+                 text-sm
+                 tracking-widest
+                 uppercase">
+
+          Portfolio
+
+        </span>
+
+
+        <h2
+          class="section-title
+                 text-3xl
+                 sm:text-4xl
+                 font-extrabold
+                 text-pinkdark
+                 mt-3">
+
+          ผลงานและกิจกรรม
+
+        </h2>
+
+
+        <p
+          class="text-slate-500
+                 mt-8
+                 max-w-2xl
+                 leading-7">
+
+          ผลงานและกิจกรรมที่สะท้อนความสนใจ
+          ด้าน STEM วิศวกรรม และการทำงานร่วมกับผู้อื่น
+
+        </p>
+
+      </div>
+
+
+
+      <div
+        class="grid sm:grid-cols-2
+               lg:grid-cols-3
+               gap-7">
+
+
+
+        <!-- PROJECT 1 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fce7f3/be185d?text=PROJECT+01"
+              alt="โครงงานสะพานไม้ไอติม"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              PROJECT 01
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              โครงงานสะพานไม้ไอติม
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ออกแบบและสร้างสะพานจากไม้ไอติม
+              เพื่อศึกษาการกระจายน้ำหนัก
+              และความแข็งแรงของโครงสร้าง
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fbcfe8/be185d?text=PROJECT+02"
+              alt="ค่าย STEM"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 02
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              ค่าย STEM Engineering
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              เรียนรู้กระบวนการคิด
+              วิเคราะห์ และแก้ปัญหา
+              ผ่านกิจกรรม STEM
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fce7f3/be185d?text=PROJECT+03"
+              alt="SketchUp"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              PROJECT 03
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              แบบจำลองบ้านด้วย SketchUp
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ฝึกสร้างแบบจำลองสามมิติ
+              และเรียนรู้พื้นฐาน
+              การออกแบบพื้นที่ใช้สอย
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 4 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/f9a8d4/be185d?text=PROJECT+04"
+              alt="AutoCAD"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              PROJECT 04
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              ฝึกเขียนแบบ AutoCAD
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ฝึกเขียนแบบสองมิติ
+              และเรียนรู้คำสั่งพื้นฐาน
+              สำหรับงานเขียนแบบวิศวกรรม
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 5 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fce7f3/be185d?text=PROJECT+05"
+              alt="การทดลองฟิสิกส์"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 05
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              การทดลองฟิสิกส์
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ทดลองเรื่องแรง
+              การเคลื่อนที่ และสมดุล
+              พร้อมฝึกวิเคราะห์ผล
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 6 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fbcfe8/be185d?text=PROJECT+06"
+              alt="Math Challenge"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 06
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              Math Challenge
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ฝึกแก้โจทย์ปัญหาคณิตศาสตร์
+              และพัฒนาทักษะการคิดวิเคราะห์
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 7 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/f9a8d4/be185d?text=PROJECT+07"
+              alt="Robotics"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 07
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              Robotics Workshop
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              เรียนรู้พื้นฐานระบบหุ่นยนต์
+              และการทำงานร่วมกับสมาชิกในทีม
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 8 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fce7f3/be185d?text=PROJECT+08"
+              alt="กิจกรรมจิตอาสา"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 08
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              กิจกรรมจิตอาสา
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ฝึกความรับผิดชอบ
+              การสื่อสาร และการทำงานเป็นทีม
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 9 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/fbcfe8/be185d?text=PROJECT+09"
+              alt="Mini Structure"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              PROJECT 09
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              Mini Structure Design
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ทดลองออกแบบโครงสร้างขนาดเล็ก
+              โดยคำนึงถึงความแข็งแรงและน้ำหนัก
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 10 -->
+
+        <article
+          class="project-card
+                 bg-white
+                 border border-pink-100
+                 rounded-2xl
+                 overflow-hidden
+                 reveal">
+
+          <div
+            class="aspect-video
+                   overflow-hidden">
+
+            <img
+              src="https://placehold.co/800x500/f9a8d4/be185d?text=PROJECT+10"
+              alt="STEM Competition"
+              class="w-full h-full object-cover">
+
+          </div>
+
+
+          <div class="p-6">
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-pinkmain">
+
+              ACTIVITY 10
+
+            </span>
+
+
+            <h3
+              class="font-bold
+                     text-lg
+                     text-pinkdark
+                     mt-2 mb-3">
+
+              STEM Competition
+
+            </h3>
+
+
+            <p
+              class="text-sm
+                     text-slate-500
+                     leading-6">
+
+              ฝึกการวางแผน
+              การแบ่งหน้าที่ และการแก้ปัญหา
+              ภายใต้เวลาที่กำหนด
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       GOAL SECTION
+       ========================================================= -->
+
+  <section
+    class="py-24
+           bg-pinkdark
+           text-white">
+
+    <div
+      class="max-w-5xl
+             mx-auto
+             px-5 lg:px-8
+             text-center">
+
+
+      <div class="reveal">
+
+        <span
+          class="text-pink-200
+                 font-bold
+                 text-sm
+                 tracking-widest
+                 uppercase">
+
+          My Goal
+
+        </span>
+
+
+        <h2
+          class="text-3xl
+                 sm:text-4xl
+                 lg:text-5xl
+                 font-extrabold
+                 mt-4 mb-7">
+
+          ทำไมฉันจึงอยากเรียนวิศวกรรมโยธา?
+
+        </h2>
+
+
+        <p
+          class="text-pink-100/90
+                 text-lg
+                 leading-8
+                 max-w-3xl
+                 mx-auto">
+
+          เพราะวิศวกรรมโยธาเป็นศาสตร์
+          ที่นำความรู้ทางคณิตศาสตร์
+          วิทยาศาสตร์ และการออกแบบ
+          มาสร้างสิ่งที่เกิดขึ้นจริง
+          ตั้งแต่อาคาร ถนน และสะพาน
+          ไปจนถึงโครงสร้างพื้นฐาน
+          ที่ช่วยพัฒนาคุณภาพชีวิตของผู้คน
+
+        </p>
+
+
+        <div class="mt-10">
+
+          <a
+            href="#contact"
+            class="inline-flex
+                   px-7 py-3.5
+                   bg-white
+                   text-pinkdark
+                   font-bold
+                   rounded-xl
+                   hover:bg-pink-50
+                   transition">
+
+            ติดต่อฉัน
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       CONTACT
+       ========================================================= -->
+
+  <section
+    id="contact"
+    class="py-24 lg:py-32
+           bg-pinksoft">
+
+    <div
+      class="max-w-6xl
+             mx-auto
+             px-5 lg:px-8">
+
+
+      <div
+        class="text-center
+               mb-14
+               reveal">
+
+
+        <span
+          class="text-pinkmain
+                 font-bold
+                 text-sm
+                 tracking-widest
+                 uppercase">
+
+          Contact
+
+        </span>
+
+
+        <h2
+          class="section-title
+                 text-3xl
+                 sm:text-4xl
+                 font-extrabold
+                 text-pinkdark
+                 mt-3">
+
+          ติดต่อฉัน
+
+        </h2>
+
+
+        <p
+          class="text-slate-500
+                 mt-8">
+
+          หากต้องการสอบถามข้อมูลเพิ่มเติม
+          สามารถติดต่อได้ผ่านช่องทางด้านล่าง
+
+        </p>
+
+      </div>
+
+
+
+      <div
+        class="grid sm:grid-cols-2
+               lg:grid-cols-4
+               gap-5">
+
+
+        <!-- Email -->
+
+        <a
+          href="mailto:student@example.com"
+          class="bg-white
+                 rounded-2xl
+                 p-6
+                 text-center
+                 shadow-sm
+                 hover:shadow-lg
+                 transition
+                 reveal">
+
+          <div class="text-3xl mb-3">
+            ✉️
+          </div>
+
+          <h3
+            class="font-bold
+                   text-pinkdark
+                   mb-2">
+
+            Email
+
+          </h3>
+
+          <p
+            class="text-sm
+                   text-slate-500
+                   break-all">
+
+            student@example.com
+
+          </p>
+
+        </a>
+
+
+
+        <!-- Phone -->
+
+        <a
+          href="tel:0800000000"
+          class="bg-white
+                 rounded-2xl
+                 p-6
+                 text-center
+                 shadow-sm
+                 hover:shadow-lg
+                 transition
+                 reveal">
+
+          <div class="text-3xl mb-3">
+            📱
+          </div>
+
+          <h3
+            class="font-bold
+                   text-pinkdark
+                   mb-2">
+
+            Phone
+
+          </h3>
+
+          <p
+            class="text-sm
+                   text-slate-500">
+
+            080-000-0000
+
+          </p>
+
+        </a>
+
+
+
+        <!-- GitHub -->
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white
+                 rounded-2xl
+                 p-6
+                 text-center
+                 shadow-sm
+                 hover:shadow-lg
+                 transition
+                 reveal">
+
+          <div class="text-3xl mb-3">
+            💻
+          </div>
+
+          <h3
+            class="font-bold
+                   text-pinkdark
+                   mb-2">
+
+            GitHub
+
+          </h3>
+
+          <p
+            class="text-sm
+                   text-slate-500">
+
+            github.com/username
+
+          </p>
+
+        </a>
+
+
+
+        <!-- Instagram -->
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white
+                 rounded-2xl
+                 p-6
+                 text-center
+                 shadow-sm
+                 hover:shadow-lg
+                 transition
+                 reveal">
+
+          <div class="text-3xl mb-3">
+            📸
+          </div>
+
+          <h3
+            class="font-bold
+                   text-pinkdark
+                   mb-2">
+
+            Instagram
+
+          </h3>
+
+          <p
+            class="text-sm
+                   text-slate-500">
+
+            @username
+
+          </p>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer
+    class="bg-pinkdark
+           text-white
+           py-10">
+
+    <div
+      class="max-w-7xl
+             mx-auto
+             px-5 lg:px-8
+             flex flex-col
+             md:flex-row
+             items-center
+             justify-between
+             gap-5">
+
+
+      <div
+        class="text-center
+               md:text-left">
+
+        <div
+          class="font-bold
+                 text-lg">
+
+          เด็กหญิงพิริยากร พรมดี
+
+        </div>
+
+
+        <div
+          class="text-sm
+                 text-pink-200
+                 mt-1">
+
+          Civil Engineering Student Portfolio
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="text-sm
+               text-pink-200
+               text-center">
+
+        Copyright © 2026
+        เด็กหญิงพิริยากร พรมดี
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       BACK TO TOP
+       ========================================================= -->
+
+  <button
+    id="backToTop"
+    class="fixed
+           bottom-6 right-6
+           w-12 h-12
+           rounded-full
+           bg-pinkmain
+           text-white
+           shadow-xl
+           flex items-center
+           justify-center
+           opacity-0
+           pointer-events-none
+           transition-all
+           duration-300
+           z-40"
+    aria-label="กลับไปด้านบน">
+
+    ↑
+
+  </button>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script>
+
+
+    /* =========================================================
+       MOBILE MENU
+       ========================================================= */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        mobileMenu.classList.toggle("open");
+
+      }
+    );
+
+
+
+    /* =========================================================
+       CLOSE MOBILE MENU
+       ========================================================= */
+
+    document
+      .querySelectorAll(".mobile-link")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileMenu.classList.remove("open");
+
+          }
+        );
+
+      });
+
+
+
+    /* =========================================================
+       SCROLL REVEAL
+       ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("active");
+
+              revealObserver
+                .unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+
+    /* =========================================================
+       PROGRESS BAR
+       ========================================================= */
+
+    const progressBars =
+      document.querySelectorAll(
+        ".progress-bar"
+      );
+
+
+    const progressObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              const width =
+                entry.target.dataset.width;
+
+              entry.target.style.width =
+                width;
+
+              progressObserver
+                .unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.5
+        }
+
+      );
+
+
+    progressBars.forEach(bar => {
+
+      progressObserver.observe(bar);
+
+    });
+
+
+
+    /* =========================================================
+       BACK TO TOP
+       ========================================================= */
+
+    const backToTop =
+      document.getElementById("backToTop");
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 500) {
+
+          backToTop.classList.remove(
+            "opacity-0",
+            "pointer-events-none"
+          );
+
+          backToTop.classList.add(
+            "opacity-100"
+          );
+
+        } else {
+
+          backToTop.classList.add(
+            "opacity-0",
+            "pointer-events-none"
+          );
+
+          backToTop.classList.remove(
+            "opacity-100"
+          );
+
+        }
+
+      }
+    );
+
+
+    backToTop.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+
+          top: 0,
+
+          behavior: "smooth"
+
+        });
+
+      }
+    );
+
+
+
+    /* =========================================================
+       NAVBAR SHADOW
+       ========================================================= */
+
+    const navbar =
+      document.getElementById("navbar");
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 20) {
+
+          navbar.classList.add(
+            "shadow-md"
+          );
+
+        } else {
+
+          navbar.classList.remove(
+            "shadow-md"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* =========================================================
+       SMOOTH SCROLL
+       ========================================================= */
+
+    document
+      .querySelectorAll('a[href^="#"]')
+      .forEach(anchor => {
+
+        anchor.addEventListener(
+          "click",
+          function(event) {
+
+            const targetId =
+              this.getAttribute("href");
+
+            if (targetId === "#")
+              return;
+
+
+            const target =
+              document.querySelector(
+                targetId
+              );
+
+
+            if (!target)
+              return;
+
+
+            event.preventDefault();
+
+
+            const navbarHeight =
+              navbar.offsetHeight;
+
+
+            const targetPosition =
+              target.getBoundingClientRect().top
+              +
+              window.scrollY
+              -
+              navbarHeight;
+
+
+            window.scrollTo({
+
+              top: targetPosition,
+
+              behavior: "smooth"
+
+            });
+
+          }
+        );
+
+      });
+
+
+  </script>
+
+
+</body>
+
+</html>
